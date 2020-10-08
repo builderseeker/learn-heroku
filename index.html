@@ -1,21 +1,54 @@
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn Heroku - Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-<style>
-h1 {
-  color: teal;
-  border: 3px teal solid;
-  font-size: 6em;
-  padding: 1em;
-  margin: 0.5em;
-  text-align: center;
-  font-family: sans-serif;
-}
-</style>
-  </body>
+<!DOCTYPE html>
+<html ng-app="com.td.tdi.uapWeb">
+
+	<head><script type="text/javascript" src="//authentication.td.com/waw/idp/js/td_common_153.js"> </script>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+
+		<title>TD Login</title>
+		<link class="td_apas_css" rel="stylesheet" href="/uap-ui/resources/css/ngDialog/ngDialog.min-c5fa3e82095f1e70809d1ed5787e3b92.css">
+		<link class="td_apas_css" rel="stylesheet" href="/uap-ui/resources/css/ngDialog/ngDialog-theme-default.min-b900984cd878165cb542a6a26f99faf7.css">
+		<link class="td_apas_css" rel="stylesheet" href="/uap-ui/resources/css/ngDialog/ngDialog-theme-plain.min-c36532cd1862460884f640d21a908b82.css">
+		
+		<link class="td_apas_css" rel="stylesheet" href="/uap-ui/resources/css/emerald/emerald.min-a715cee9a345d123296684f4d664c79d.css">
+
+		<link rel="icon" href="resources/styles/emerald/favicon.ico">
+		
+
+
+
+	</head>
+
+	<body prevent-click-highlight autoscroll>
+
+		<div id="contentWrapper">
+
+			<!-- Header -->
+			<div data-ui-view="header"></div>
+
+			<!-- Main Content / Body -->
+			<div class="td-contentarea" role="main">
+				<UI-VIEW></UI-VIEW>
+			</div>
+
+			<!-- Footer -->
+			<div data-ui-view="footer"></div>
+
+		</div>
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="resources/td-otp-web/es5-shim.min.js"></script>
+		<script type="text/javascript" src="resources/td-otp-web/html5shiv.min.js"></script>
+		<![endif]-->
+
+		<script id="#client-configuration" type="text/javascript">
+			window.uap = window.uap || {};
+			window.uap.configuration = {"configurationValues":[{"ThirdPartyResumePath":"/waw/idp/authn/v1/return/third-party"},{"ads":{"enabled":true,"tags":[{"tagId":16206015,"targetId":"ad_slot_ew","lang":"en_CA"},{"tagId":16206016,"targetId":"ad_slot_ew","lang":"fr_CA"}]}},{"Ping_Domain":"https://authorization.td.com"},{"authenticationFlowType":"ropc"},{"redirect_uri_default_en_CA":"https://easyweb.td.com/waw/ezw/CIPLoginRedirect"},{"redirect_uri_default_fr_CA":"https://banquenet.td.com/waw/ezw/CIPLoginRedirect"},{"redirect_uri":null},{"additionalParams":null},{"ec":null},{"lang":"en_CA"},{"consumer":"easyweb"},{"tsnConsumerAppId":null},{"redirect_uri":""}]};
+		</script>
+		<script type="text/javascript" src="/uap-ui/resources/js/td-otp-web-uap.min-d0f4fb032b12594bb5b2d89ecc3a5d35.js"></script>
+	</body>
+
 </html>
